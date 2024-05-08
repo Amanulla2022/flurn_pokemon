@@ -12,9 +12,14 @@ const Header = () => {
         </div>
         <nav>
           <ul className="flex space-x-4">
-            <li>
+            <li className="bg-gray-100 p-2 rounded-lg">
               <Link to="/" className="text-gray-700 hover:text-gray-900">
                 Home
+              </Link>
+            </li>
+            <li className="bg-gray-100 p-2 rounded-lg">
+              <Link to="/fav" className="text-gray-700 hover:text-gray-900">
+                Favorities
               </Link>
             </li>
           </ul>
