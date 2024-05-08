@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { fetchPokemonDetails } from "../../apiCall/api";
 import { Link } from "react-router-dom";
+import { MdDelete } from "react-icons/md";
+import { GrLinkPrevious } from "react-icons/gr";
 
 const MyFav = () => {
   const [favoritePokemons, setFavoritePokemons] = useState([]);
@@ -31,7 +33,7 @@ const MyFav = () => {
     <>
       <div className="mt-8">
         <h2 className="text-2xl font-bold mb-4">My Favorite Pokémon's</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 bg-gray-200 p-4">
           {favoritePokemons.map((pokemon) => (
             <div key={pokemon.id} className="bg-white rounded-lg shadow-md p-4">
               <p className="text-center font-semibold uppercase">
@@ -49,15 +51,18 @@ const MyFav = () => {
                 className="block mx-auto mt-2 px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
                 onClick={() => removeFavorite(pokemon.id)}
               >
-                Remove from Favorites
+                <MdDelete />
               </button>
             </div>
           ))}
         </div>
       </div>
       <div className="flex justify-center">
-        <Link className="m-8 bg-gray-600 p-2 rounded-xl text-white" to="/">
-          Go to Home Page
+        <Link
+          className="m-8 flex items-center gap-4 bg-gray-600 p-2 rounded-xl text-white"
+          to="/"
+        >
+          <GrLinkPrevious /> Go to Home Page
         </Link>
       </div>
     </>

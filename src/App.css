@@ -3,3 +3,7 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+.social-icons {
+  @apply transition-colors duration-300 hover:text-white;
+}

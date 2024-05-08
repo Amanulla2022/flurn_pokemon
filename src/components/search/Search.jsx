@@ -1,5 +1,3 @@
-// SearchPage.js
-
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { searchPokemon } from "../../apiCall/api";
@@ -28,9 +26,9 @@ const Search = () => {
   };
 
   return (
-    <div className="container mx-auto mt-8">
-      <h1 className="text-3xl font-bold mb-4">Search Pokémon</h1>
-      <div className="flex items-center">
+    <div className="container mx-auto ">
+      <h1 className="text-3xl font-bold mb-4">Search Pokémon By Name :</h1>
+      <div className="flex items-center md:flex-row flex-col gap-4">
         <input
           type="text"
           className="px-4 py-2 rounded-md border border-gray-300 mr-2 w-full"
@@ -39,7 +37,7 @@ const Search = () => {
           onChange={(e) => setPokemonName(e.target.value)}
         />
         <button
-          className="bg-blue-500 text-white px-4 py-2 rounded-md disabled:bg-gray-400 disabled:cursor-not-allowed"
+          className="bg-blue-500 text-white px-4 py-2 rounded-md disabled:bg-gray-400 disabled:cursor-not-allowed "
           onClick={handleSearch}
           disabled={isLoading}
         >
