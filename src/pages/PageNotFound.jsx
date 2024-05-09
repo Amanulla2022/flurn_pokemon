@@ -4,7 +4,7 @@ import { GrLinkPrevious } from "react-icons/gr";
 
 const PageNotFound = () => {
   return (
-    <div className="flex justify-center items-center flex-col mt-8">
+    <div className="flex justify-center items-center flex-col mt-8 page">
       <p className="text-bold text-2xl text-red-500">
         I guess You have came to wrong path do one thing go to home page :)
       </p>

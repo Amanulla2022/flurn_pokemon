@@ -72,7 +72,7 @@ const PokemonDetails = () => {
             toggleBookmark={toggleBookmark}
             isBookmarked={isBookmarked}
           />
-          <div className="flex gap-4">
+          <div className="flex flex-col md:flex-row gap-4">
             <PokemonDesc pokemonDetails={pokemonDetails} />
             <PokemonStats pokemonDetails={pokemonDetails} />
           </div>

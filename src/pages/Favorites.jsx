@@ -3,7 +3,7 @@ import MyFav from "../components/favorities/MyFav";
 
 const Favorites = () => {
   return (
-    <div>
+    <div className="page">
       <MyFav />
     </div>
   );

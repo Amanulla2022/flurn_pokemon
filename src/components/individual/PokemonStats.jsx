@@ -2,7 +2,7 @@ import React from "react";
 
 const PokemonStats = ({ pokemonDetails }) => {
   return (
-    <div className="mt-8 flex flex-col  w-full lg:w-1/3">
+    <div className="mt-8 flex flex-col w-full lg:w-1/3">
       <h2 className="text-xl font-semibold mb-4 underline">Stats:</h2>
       <div className="flex flex-wrap gap-4">
         {pokemonDetails.stats.map((stat, index) => (

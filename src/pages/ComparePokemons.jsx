@@ -3,7 +3,7 @@ import Comparison from "../components/compare/Comparison";
 
 const ComparePokemons = () => {
   return (
-    <div>
+    <div className="page">
       <Comparison />
     </div>
   );

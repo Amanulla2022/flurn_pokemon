@@ -1,70 +1,26 @@
-# Getting Started with Create React App
+# Pokémon App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the Pokémon App! This project is a React-based web application that allows users to search for Pokémon, view their details, compare them, and add them to favorites. It utilizes the [PokéAPI](https://pokeapi.co/) to fetch Pokémon data.
 
-## Available Scripts
+## [Hosted Link](https://flurn-pokemon-amanullas-projects.vercel.app/)
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+Search Pokémon: Users can search for Pokémon by name. The app provides real-time search functionality to find Pokémon quickly.
+View Pokémon Details: Users can click on a Pokémon to view its detailed information, including its abilities, stats, and more.
+Filter Pokémon: Users can filter Pokémon by type or ability to find specific ones.
+Compare Pokémon: Users can select and compare the details of two Pokémon side by side to analyze their stats and abilities.
+Favorites: Users can bookmark their favorite Pokémon and access them later in the Favorites section.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Usage
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Home Page: The home page displays a search bar where users can enter the name of a Pokémon to search for.
+Individual Pokémon Page: Clicking on a Pokémon card in the search results or the list page redirects the user to a detailed page showing the selected Pokémon's information.
+List Page: This page displays a grid of Pokémon cards. Users can filter Pokémon by type or ability and load more Pokémon.
+Compare Page: Users can compare the details of two selected Pokémon side by side.
+Favorites Page: This page shows a list of user-selected favorite Pokémon.
+404 Page: If the user navigates to a non-existent route, they will be redirected to a 404 page.
 
-### `npm test`
+## Author
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Amanulla Iqbal Mulla](https://www.linkedin.com/in/amanulla-mulla-000678232/)

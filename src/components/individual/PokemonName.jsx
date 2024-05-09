@@ -18,7 +18,7 @@ const PokemonName = ({ pokemonDetails, toggleBookmark, isBookmarked }) => {
           <span>See It's </span>
           <span className="uppercase underline">{pokemonDetails.name}!!!</span>
         </h1>
-        <div className="flex flex-col lg:flex-row md:gap-20 gap-1 items-center">
+        <div className="flex flex-col md:flex-row md:gap-20 items-center">
           <div className="image-div">
             <img
               src={pokemonDetails.sprites.other.dream_world.front_default}

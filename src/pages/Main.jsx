@@ -4,7 +4,7 @@ import RotatingImage from "../components/search/RotatingImage";
 
 const Main = () => {
   return (
-    <div>
+    <div className="page">
       <Search />
       <RotatingImage />
     </div>

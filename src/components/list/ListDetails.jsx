@@ -131,7 +131,7 @@ const ListDetails = () => {
         handleAbilityChange={handleAbilityChange}
         handleFilter={handleFilter}
       />
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4  gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
         {pokemonList.map((pokemon, index) => (
           <div key={index}>
             <input

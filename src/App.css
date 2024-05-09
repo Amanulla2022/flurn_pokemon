@@ -45,3 +45,7 @@
 .image-border {
   @apply border-green-400 transition-transform duration-300 hover:translate-x-1 hover:scale-105  cursor-pointer;
 }
+
+.page {
+  @apply mx-4 md:mx-8;
+}

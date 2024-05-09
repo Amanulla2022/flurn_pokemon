@@ -3,7 +3,7 @@ import PokemonDetails from "../components/individual/PokemonDetails";
 
 const IndividualPage = () => {
   return (
-    <div>
+    <div className="page">
       <PokemonDetails />
     </div>
   );

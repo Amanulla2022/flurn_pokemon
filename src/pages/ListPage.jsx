@@ -3,7 +3,7 @@ import ListDetails from "../components/list/ListDetails";
 
 const ListPage = () => {
   return (
-    <div>
+    <div className="page">
       <ListDetails />
     </div>
   );
