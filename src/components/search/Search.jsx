@@ -13,7 +13,9 @@ const Search = () => {
     setError(null);
 
     if (!pokemonName.trim()) {
-      alert("Please enter a Pokémon name before searching!!!.");
+      alert(
+        "Please enter a Pokémon name before searching!!!. like abra, pikachu"
+      );
       setIsLoading(false);
       return;
     }
@@ -33,7 +35,7 @@ const Search = () => {
 
   return (
     <div className="container mx-auto pt-8">
-      <h1 className="text-3xl font-bold mb-4 text-white inline-block bg-blue-500 p-2 rounded-xl opacity-80">
+      <h1 className="text-3xl font-bold mb-4 text-teal-500">
         Search Pokémon By Name :
       </h1>
       <div className="flex items-center md:flex-row flex-col gap-4">

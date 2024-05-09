@@ -21,30 +21,37 @@ const PokemonName = ({ pokemonDetails, toggleBookmark, isBookmarked }) => {
         <div className="flex flex-col lg:flex-row md:gap-20 gap-1 items-center">
           <div className="image-div">
             <img
-              src={pokemonDetails.sprites.front_default}
+              src={pokemonDetails.sprites.other.dream_world.front_default}
               alt={pokemonDetails.name}
-              className="mx-auto mb-4 lg:mb-0 h-48 w-48 border rounded-full image-border"
+              className="mx-auto h-40 w-40 border rounded-full image-border"
             />
           </div>
 
           <div className="image-div">
             <img
-              src={pokemonDetails.sprites.back_default}
+              src={pokemonDetails.sprites.other.showdown.front_shiny}
               alt={pokemonDetails.name}
-              className="mx-auto h-48 w-48 border rounded-full image-border"
+              className="mx-auto h-28 w-40 "
             />
           </div>
-          <ul className="flex flex-wrap gap-2">
-            {pokemonDetails.types.map((type, index) => (
-              <li
-                key={index}
-                className="text-white bg-purple-400 px-2 py-1 rounded-full"
-              >
-                {type.type.name}
-              </li>
-            ))}
-          </ul>
+          <div className="image-div">
+            <img
+              src={pokemonDetails.sprites.other.home.front_shiny}
+              alt={pokemonDetails.name}
+              className="mx-auto h-40 w-40 border rounded-full image-border"
+            />
+          </div>
         </div>
+        <ul className="flex flex-wrap gap-2 mt-4">
+          {pokemonDetails.types.map((type, index) => (
+            <li
+              key={index}
+              className="text-white bg-purple-400 px-2 py-1 rounded-full"
+            >
+              {type.type.name}
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );

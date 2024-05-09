@@ -46,7 +46,7 @@ const MyDetails = () => {
           </a>
         </li>
       </ul>
-      <p className=" mt-4 bg-purple-800 p-2 text-white opacity-75 rounded-xl">
+      <p className=" mt-4  p-2 text-black opacity-75 rounded-xl">
         Created by me,
         <a
           href="https://github.com/Amanulla2022/flurn_pokemon"

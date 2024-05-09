@@ -138,6 +138,7 @@ const ListDetails = () => {
               type="checkbox"
               checked={selectedPokemon.some((p) => p.id === pokemon.id)}
               onChange={(e) => handleCheckboxChange(e, pokemon)}
+              className="cursor-pointer"
             />
 
             <Link to={`/pokemon/${pokemon.id}`}>

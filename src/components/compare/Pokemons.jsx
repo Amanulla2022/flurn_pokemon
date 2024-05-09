@@ -12,22 +12,23 @@ const Pokemons = ({ pokemon }) => {
         </div>
         <div className="flex justify-around flex-wrap gap-4">
           <img
-            src={pokemon.sprites.front_shiny}
+            src={pokemon.sprites.other.dream_world.front_default}
+            alt={pokemon.name}
+            className="image image-border"
+          />
+
+          <img
+            src={pokemon.sprites.other.home.front_shiny}
             alt={pokemon.name}
             className="image image-border"
           />
           <img
-            src={pokemon.sprites.back_shiny}
+            src={pokemon.sprites.other.showdown.front_shiny}
             alt={pokemon.name}
             className="image image-border"
           />
           <img
-            src={pokemon.sprites.front_default}
-            alt={pokemon.name}
-            className="image image-border"
-          />
-          <img
-            src={pokemon.sprites.back_default}
+            src={pokemon.sprites.other.showdown.back_shiny}
             alt={pokemon.name}
             className="image image-border"
           />

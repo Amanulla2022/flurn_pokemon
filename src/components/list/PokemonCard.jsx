@@ -19,7 +19,7 @@ const PokemonCard = ({ pokemon }) => {
 
   return (
     <div
-      className={`max-w-sm relative  rounded-xl overflow-hidden shadow-lg  ${
+      className={`max-w-sm relative  rounded-xl overflow-hidden shadow-lg h-72 md:66  ${
         isFront ? "" : "rotate-y-180"
       }`}
       style={{ backgroundColor: backColor }}
@@ -29,47 +29,51 @@ const PokemonCard = ({ pokemon }) => {
       <div className="absolute right-2 top-2 bg-purple-500 rounded-lg text-white p-1">
         #{pokemon.order}
       </div>
-      <div className="w-full h-300 flex">
-        <img
-          src={pokemon.sprites.back_default}
-          alt={pokemon.name}
-          className={`image-of-pokemon ${
-            isFront ? "opacity-0" : "opacity-100"
-          }`}
-        />
-        <img
-          src={pokemon.sprites.front_default}
-          alt={pokemon.name}
-          className={`image-of-pokemon ${isFront ? "" : "opacity-100"}`}
-        />
-      </div>
-      <div className="px-6 py-4">
-        <div
-          className={`font-bold text-xl mb-2 text-white underline ${
-            isFront ? "" : "rotate-y-180"
-          }`}
-        >
-          {isFront ? pokemon.name.toUpperCase() : "More Details"}
+      <div>
+        <div className="flex flex-col justify-center gap-8 items-center ">
+          {isFront ? (
+            <>
+              <img
+                src={pokemon.sprites.other.dream_world.front_default}
+                alt={pokemon.name}
+                className="h-36 w-36"
+              />
+              <p className="text-xl text-gray-800 bg-gray-300 w-full flex items-center justify-center">
+                {pokemon.name}
+              </p>
+              <ul className="flex flex-wrap gap-2">
+                {pokemon.types.map((type, index) => (
+                  <li
+                    key={index}
+                    className="text-white bg-black px-2 py-1 rounded-full"
+                  >
+                    {type.type.name}
+                  </li>
+                ))}
+              </ul>
+            </>
+          ) : (
+            <>
+              <img
+                src={pokemon.sprites.other.home.front_shiny}
+                alt={pokemon.name}
+                className="h-36 w-36"
+              />
+              <p className="text-xl text-gray-800 bg-gray-200 w-full flex items-center justify-center">
+                {pokemon.name}
+              </p>
+              <ul className="flex flex-wrap item-center justify-center gap-2 pl-2 bg-black text-white w-full">
+                <p>Abilities :</p>
+                {pokemon.abilities.map((ability, index) => (
+                  <span>
+                    {ability.ability.name}
+                    {index !== pokemon.abilities.length - 1 && ","}
+                  </span>
+                ))}
+              </ul>
+            </>
+          )}
         </div>
-        {isFront ? (
-          <>
-            <div className={`common-b-margin ${isFront ? "" : "rotate-y-180"}`}>
-              Base Experience: <span>{pokemon.base_experience} level</span>
-            </div>
-            <div className={`common-b-margin ${isFront ? "" : "rotate-y-180"}`}>
-              Species: <span>{pokemon.species.name}</span>
-            </div>
-          </>
-        ) : (
-          <>
-            <div className="common-b-margin">
-              Height: <span>{pokemon.height} cm</span>
-            </div>
-            <div className="common-b-margin">
-              Weight: <span>{pokemon.weight} kg</span>
-            </div>
-          </>
-        )}
       </div>
     </div>
   );

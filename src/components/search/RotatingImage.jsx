@@ -6,7 +6,7 @@ const RotatingImage = () => {
   return (
     <div className="flex flex-col justify-center items-center mt-20">
       <div className="relative">
-        <img src={imageUrl} alt="Rotating" className="h-60 w-60 animate-spin" />
+        <img src={imageUrl} alt="Rotating" className="h-28 w-28 animate-spin" />
       </div>
       <MyDetails />
     </div>
