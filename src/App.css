@@ -3,7 +3,32 @@
   margin: 0;
   box-sizing: border-box;
 }
-
+/* main/search page */
+.icon-font {
+  @apply text-2xl;
+}
 .social-icons {
-  @apply transition-colors duration-300 hover:text-white;
+  @apply transition-colors duration-300 text-xl hover:text-pink-600;
+}
+
+/* list page */
+.image-of-pokemon {
+  @apply w-full h-full object-cover;
+}
+
+.common-b-margin {
+  @apply mb-2;
+}
+
+.filter-border {
+  @apply border border-gray-300 rounded-md px-2 py-1;
+}
+
+/* individual page */
+.image-div {
+  @apply w-full lg:w-1/2;
+}
+
+.white-border {
+  @apply border p-2 border-white;
 }

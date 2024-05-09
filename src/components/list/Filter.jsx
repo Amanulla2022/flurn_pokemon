@@ -17,7 +17,7 @@ const Filter = ({
         id="type-select"
         value={selectedType}
         onChange={handleTypeChange}
-        className="border border-gray-300 rounded-md px-2 py-1"
+        className="filter-border"
       >
         <option value="">All Types</option>
         {types.map((type) => (
@@ -31,7 +31,7 @@ const Filter = ({
         id="ability-select"
         value={selectedAbility}
         onChange={handleAbilityChange}
-        className="border border-gray-300 rounded-md px-2 py-1"
+        className="filter-border"
       >
         <option value="">All Abilities</option>
         {searchedPokemon &&

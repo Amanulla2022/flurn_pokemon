@@ -7,29 +7,21 @@ const PokemonDesc = ({ pokemonDetails }) => {
       <div className="overflow-x-auto">
         <table className="w-full border border-black text-white">
           <tbody>
-            <tr className="p-2">
+            <tr className="common-b-margin">
               <td className="border p-2 font-semibold">Base Experience:</td>
-              <td className="border p-2 border-white">
-                {pokemonDetails.base_experience}
-              </td>
+              <td className="white-border">{pokemonDetails.base_experience}</td>
             </tr>
             <tr>
-              <td className="border p-2 border-white font-semibold">Height:</td>
-              <td className="border p-2 border-white">
-                {pokemonDetails.height} cm
-              </td>
+              <td className="white-border font-semibold">Height:</td>
+              <td className="white-border">{pokemonDetails.height} cm</td>
             </tr>
             <tr>
-              <td className="border p-2 border-white font-semibold">Weight:</td>
-              <td className="border p-2 border-white">
-                {pokemonDetails.weight} kg
-              </td>
+              <td className="white-border font-semibold">Weight:</td>
+              <td className="white-border">{pokemonDetails.weight} kg</td>
             </tr>
             <tr>
-              <td className="border p-2 border-white font-semibold">
-                Abilities:
-              </td>
-              <td className="border p-2 border-white">
+              <td className="white-border font-semibold">Abilities:</td>
+              <td className="white-border">
                 <ul className="flex flex-wrap gap-2">
                   {pokemonDetails.abilities.map((ability, index) => (
                     <li
@@ -43,8 +35,8 @@ const PokemonDesc = ({ pokemonDetails }) => {
               </td>
             </tr>
             <tr>
-              <td className="border p-2 border-white font-semibold">Moves:</td>
-              <td className="border p-2 border-white">
+              <td className="white-border font-semibold">Moves:</td>
+              <td className="white-border">
                 <ul className="flex flex-wrap gap-2">
                   {pokemonDetails.moves.slice(0, 5).map((move, index) => (
                     <li

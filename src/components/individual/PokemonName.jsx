@@ -15,11 +15,11 @@ const PokemonName = ({ pokemonDetails, toggleBookmark, isBookmarked }) => {
           #{pokemonDetails.order}
         </div>
         <h1 className="text-3xl font-semibold my-8 text-teal-600 ">
-          <span>See Its</span>
+          <span>See It's </span>
           <span className="uppercase underline">{pokemonDetails.name}!!!</span>
         </h1>
         <div className="flex flex-col lg:flex-row md:gap-20 gap-1 items-center">
-          <div className="w-full lg:w-1/2">
+          <div className="image-div">
             <img
               src={pokemonDetails.sprites.front_default}
               alt={pokemonDetails.name}
@@ -27,7 +27,7 @@ const PokemonName = ({ pokemonDetails, toggleBookmark, isBookmarked }) => {
             />
           </div>
 
-          <div className="w-full lg:w-1/2">
+          <div className="image-div">
             <img
               src={pokemonDetails.sprites.back_default}
               alt={pokemonDetails.name}

@@ -33,29 +33,42 @@ const MyFav = () => {
     <>
       <div className="mt-8">
         <h2 className="text-2xl font-bold mb-4">My Favorite Pokémon's</h2>
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 bg-gray-200 p-4">
-          {favoritePokemons.map((pokemon) => (
-            <div key={pokemon.id} className="bg-white rounded-lg shadow-md p-4">
-              <p className="text-center font-semibold uppercase">
-                {pokemon.name}
-              </p>
-              <img
-                src={pokemon.sprites.front_default}
-                alt={pokemon.name}
-                className="w-24 h-24 mx-auto mb-2"
-              />
-
-              <div className="mb-2">Height: {pokemon.height} cm</div>
-              <div className="mb-2">Weight: {pokemon.weight} kg</div>
-              <button
-                className="block mx-auto mt-2 px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
-                onClick={() => removeFavorite(pokemon.id)}
+        {favoritePokemons.length === 0 ? (
+          <p className="text-center text-gray-600 text-2xl font-bold mb-4">
+            Add your favorites here! :)
+          </p>
+        ) : (
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 bg-gray-200 p-4">
+            {favoritePokemons.map((pokemon) => (
+              <div
+                key={pokemon.id}
+                className="bg-white rounded-lg shadow-md p-4"
               >
-                <MdDelete />
-              </button>
-            </div>
-          ))}
-        </div>
+                <p className="text-center font-semibold uppercase">
+                  {pokemon.name}
+                </p>
+                <img
+                  src={pokemon.sprites.front_default}
+                  alt={pokemon.name}
+                  className="w-24 h-24 mx-auto mb-2"
+                />
+
+                <div className="common-b-margin">
+                  Height: {pokemon.height} cm
+                </div>
+                <div className="common-b-margin">
+                  Weight: {pokemon.weight} kg
+                </div>
+                <button
+                  className="block mx-auto mt-2 px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
+                  onClick={() => removeFavorite(pokemon.id)}
+                >
+                  <MdDelete />
+                </button>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
       <div className="flex justify-center">
         <Link

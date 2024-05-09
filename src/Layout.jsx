@@ -5,6 +5,7 @@ import Main from "./pages/Main";
 import ListPage from "./pages/ListPage";
 import IndividualPage from "./pages/IndividualPage";
 import Favorites from "./pages/Favorites";
+import PageNotFound from "./pages/PageNotFound";
 
 const Layout = () => {
   return (
@@ -15,6 +16,7 @@ const Layout = () => {
         <Route path="/list" element={<ListPage />} />
         <Route path="/pokemon/:id" element={<IndividualPage />} />
         <Route path="/fav" element={<Favorites />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </Router>
   );

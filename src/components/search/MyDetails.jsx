@@ -12,7 +12,7 @@ const MyDetails = () => {
             rel="noreferrer"
             className="social-icons  "
           >
-            <FaGithub className="text-2xl" />
+            <FaGithub className="icon-font" />
           </a>
         </li>
         <li>
@@ -22,7 +22,7 @@ const MyDetails = () => {
             rel="noreferrer"
             className="social-icons  "
           >
-            <FaLinkedin className="text-2xl" />
+            <FaLinkedin className="icon-font" />
           </a>
         </li>
         <li>
@@ -32,7 +32,7 @@ const MyDetails = () => {
             rel="noreferrer"
             className="social-icons  "
           >
-            <FaFacebook className="text-2xl" />
+            <FaFacebook className="icon-font" />
           </a>
         </li>
         <li>
@@ -42,17 +42,17 @@ const MyDetails = () => {
             rel="noreferrer"
             className="social-icons  "
           >
-            <FaInstagram className="text-2xl" />
+            <FaInstagram className="icon-font" />
           </a>
         </li>
       </ul>
-      <p className=" mt-4">
+      <p className=" mt-4 bg-purple-800 p-2 text-white opacity-75 rounded-xl">
         Created by me,
         <a
           href="https://github.com/Amanulla2022/flurn_pokemon"
           rel="noreferrer"
           target="_blank"
-          className="underline  social-icons"
+          className="underline social-icons"
         >
           Amanulla Iqbal Mulla
         </a>
