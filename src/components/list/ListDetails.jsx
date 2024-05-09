@@ -18,6 +18,7 @@ const ListDetails = () => {
   const [selectedAbility, setSelectedAbility] = useState("");
   const [searchedPokemon, setSearchedPokemon] = useState(null);
   const [page, setPage] = useState(0);
+  const [selectedPokemon, setSelectedPokemon] = useState([]);
 
   useEffect(() => {
     if (location.state && location.state.searchedPokemon) {
@@ -87,9 +88,40 @@ const ListDetails = () => {
     fetchPokemon(pokemonList, page + 9);
   };
 
+  const handleCheckboxChange = (e, pokemon) => {
+    const isChecked = e.target.checked;
+    if (isChecked) {
+      if (selectedPokemon.length === 2) {
+        const remainingPokemon = selectedPokemon.slice(1);
+        setSelectedPokemon([...remainingPokemon, pokemon]);
+      } else {
+        setSelectedPokemon([...selectedPokemon, pokemon]);
+      }
+    } else {
+      setSelectedPokemon(selectedPokemon.filter((p) => p.id !== pokemon.id));
+    }
+  };
+
+  const handleComparePokemon = () => {
+    if (selectedPokemon.length === 2) {
+      const ids = selectedPokemon.map((pokemon) => pokemon.id);
+      window.location.href = `/compare/${ids[0]}/${ids[1]}`;
+    }
+  };
+
   return (
     <div className="container mx-auto mt-8">
       <h1 className="text-3xl font-bold mb-4">List of Pokémons</h1>
+      {selectedPokemon.length === 2 && (
+        <div className="flex fixed z-10">
+          <button
+            className="bg-black hover:bg-teal-700 text-white font-bold py-2 px-4 rounded mt-4 opacity-75"
+            onClick={handleComparePokemon}
+          >
+            Compare Both Pokémons
+          </button>
+        </div>
+      )}
       <Filter
         types={types}
         searchedPokemon={searchedPokemon}
@@ -101,13 +133,22 @@ const ListDetails = () => {
       />
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4  gap-4">
         {pokemonList.map((pokemon, index) => (
-          <Link key={index} to={`/pokemon/${pokemon.id}`}>
-            <PokemonCard pokemon={pokemon} />
-          </Link>
+          <div key={index}>
+            <input
+              type="checkbox"
+              checked={selectedPokemon.some((p) => p.id === pokemon.id)}
+              onChange={(e) => handleCheckboxChange(e, pokemon)}
+            />
+
+            <Link to={`/pokemon/${pokemon.id}`}>
+              <PokemonCard pokemon={pokemon} />
+            </Link>
+          </div>
         ))}
         {loading && <div>Loading...</div>}
         {error && <div>Error: {error}</div>}
       </div>
+
       <div className="flex justify-center">
         <button
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4"

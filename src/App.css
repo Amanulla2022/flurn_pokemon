@@ -32,3 +32,16 @@
 .white-border {
   @apply border p-2 border-white;
 }
+
+/* compare page */
+.image {
+  @apply h-32 w-32 rounded-full  border-2;
+}
+
+.list-item {
+  @apply text-white bg-pink-400 px-2 py-1 rounded-full;
+}
+
+.image-border {
+  @apply border-green-400 transition-transform duration-300 hover:translate-x-1 hover:scale-105  cursor-pointer;
+}

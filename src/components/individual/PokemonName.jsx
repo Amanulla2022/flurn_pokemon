@@ -23,7 +23,7 @@ const PokemonName = ({ pokemonDetails, toggleBookmark, isBookmarked }) => {
             <img
               src={pokemonDetails.sprites.front_default}
               alt={pokemonDetails.name}
-              className="mx-auto mb-4 lg:mb-0 h-48 w-48 border rounded-full border-green-400 transition-transform duration-300 hover:translate-x-1 hover:scale-105  cursor-pointer"
+              className="mx-auto mb-4 lg:mb-0 h-48 w-48 border rounded-full image-border"
             />
           </div>
 
@@ -31,7 +31,7 @@ const PokemonName = ({ pokemonDetails, toggleBookmark, isBookmarked }) => {
             <img
               src={pokemonDetails.sprites.back_default}
               alt={pokemonDetails.name}
-              className="mx-auto h-48 w-48 border rounded-full border-green-400 transition-transform duration-300 hover:translate-x-1 hover:scale-105  cursor-pointer"
+              className="mx-auto h-48 w-48 border rounded-full image-border"
             />
           </div>
           <ul className="flex flex-wrap gap-2">
